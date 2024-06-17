@@ -1,0 +1,153 @@
+{% extends 'base_generic.html' %}
+
+{% block title %} Поиск работы {% endblock %} 
+
+{%block styles %} 
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/job_search.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <div class="page_container">
+        <nav>
+            <div class="nav__title">
+                Job Search
+            </div>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        Position
+                    </div>
+                    <div class="nav__item-open">
+                        +
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        name position
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        name position
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        Location
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        Industry
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        Salary range
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        Specifics
+                    </div>
+                    <div class="nav__item-open">
+                        +
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        specifics
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <div class="header__section">
+                <div class="block">
+                    Name/ Position
+                </div>
+                <div class="block">
+                    Start Date
+                </div>
+                <div class="block">
+                    AI Tools
+                </div>
+            </div>
+            <div class="main__section">
+                <div class="main__block-container">
+                    <div class="main__block">
+                        <div class="main__block-title">
+                            List of desired companies   
+                        </div>
+                        <div class="main__block-add">
+                            +
+                        </div>
+                    </div>
+                    <div>
+                        <div class="main__block-fields">
+                            Company
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main__block-container">
+                    <div class="main__block">
+                        <div class="main__block-title">
+                            Do you know anyone who could potentially help you with referrals to companies?    
+                        </div>
+                        <div class="main__block-add">
+                            +
+                        </div>
+                    </div>
+                    <div>
+                        <div class="main__block-fields">
+                            Name
+                        </div>
+                    </div>
+                    <div>
+                        <div class="main__block-fields">
+                            Name
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main__block-container">
+                    <div class="main__block">
+                        <div class="main__block-title">
+                            List of undesirable companies
+                        </div>
+                        <div class="main__block-add">
+                            +
+                        </div>
+                    </div>
+                    <div>
+                        <div class="main__block-fields">
+                            Link description
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main__block-container">
+                    <div class="main__block">
+                        <div class="main__block-title">
+                            Synchronization 
+                        </div>
+                        <div class="main__block-add">
+                            +
+                        </div>
+                    </div>
+                    <div>
+                        <div class="main__block-fields">
+                            Email
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

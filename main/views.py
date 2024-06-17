@@ -13,7 +13,7 @@ def account_view(request):
 
 def job_search_view(request):
     """Отображение шаблона страницы поиска вакансий."""
-    return HttpResponse('Ok')
+    return render(request, "job_search.html")
 
 
 def job_search(request):
