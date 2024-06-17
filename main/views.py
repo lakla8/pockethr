@@ -3,7 +3,7 @@ from django.shortcuts import render, HttpResponse
 
 def home_view(request):
     """Отображение шаблона домашней страницы."""
-    return HttpResponse('Ok')
+    return render(request, "index.html")
 
 
 def account_view(request):
