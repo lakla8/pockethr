@@ -1,0 +1,105 @@
+{% extends 'base_generic.html' %}
+
+{% block title %} Клиенты {% endblock %} 
+
+{%block styles %} 
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/clients.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <div class="page_container">
+        <nav>
+            <div class="nav__title">
+                My Clients
+            </div>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        Client
+                    </div>
+                    <div class="nav__item-open">
+                        v
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        Client 1
+                    </div>
+                    <div class="nav__item-open">
+                        +
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        Client 2
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        Build Graph
+                    </div>
+                    <div class="nav__item-open">
+                        v
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        position
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        role
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        interests
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        industry
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        location
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        client
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        goals
+                    </div>
+                </li>
+                
+            </ul>
+        </nav>
+        <main>
+            <div class="actions">
+                <div class="tools">
+                    <div class="tools__container">
+                        AI Tools
+                    </div>
+                </div>
+                <div class="actions__container">
+                    <div class="action">Strategies</div>
+                    <div class="action">Trackers</div>
+                    <div class="action">Analytics</div>
+                </div>
+            </div>
+            <div class="bg__image">
+                <img src="{% static 'image/bg-preview.png' %}" alt="">
+            </div>
+        </main>
+    </div>
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

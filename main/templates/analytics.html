@@ -1,0 +1,59 @@
+{% extends 'base_generic.html' %}
+
+{% block title %} Аналитика {% endblock %} 
+
+{%block styles %} 
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/analytics.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <div class="page_container">
+        <nav>
+            <div class="nav__title">
+                Analytics
+            </div>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        Dashboards
+                    </div>
+                    <div class="nav__item-open">
+                        v
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        All in one
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        Networking
+                    </div>
+                    <div class="nav__item-open">
+                        v
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        Job Search
+                    </div>
+                    <div class="nav__item-open">
+                        v
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <div class="tools">
+                <div class="tools__container">
+                    AI Tools
+                </div>
+            </div>
+        </main>
+    </div>
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

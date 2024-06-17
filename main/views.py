@@ -23,7 +23,7 @@ def job_search(request):
 
 def clients_view(request):
     """Отображение шаблона страницы клиентов."""
-    return HttpResponse('Ok')
+    return render(request, "clients.html")
 
 
 def networking_view(request):
@@ -42,7 +42,7 @@ def trackers_view(request):
 
 def analytics_view(request):
     """Отображение шаблона страницы аналитики."""
-    return HttpResponse('Ok')
+    return render(request, "analytics.html")
 
 
 def personal_information_view(request):
