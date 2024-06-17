@@ -32,7 +32,7 @@ def networking_view(request):
 
 def strategies_view(request):
     """Отображение шаблона страницы стратегий."""
-    return HttpResponse('Ok')
+    return render(request, "strategies.html")
 
 
 def trackers_view(request):

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url("root.css");
 
 *,
@@ -5,9 +6,9 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
-    color: #000000;
+    color: var(--base_font_color);
     text-decoration: none;
     list-style: none;
     border: none;
@@ -27,9 +28,7 @@ body {
 }
 
 body {
-    background-color: var(--page_background_color);
-    display: flex;
-    flex-direction: row;
+    background: radial-gradient(circle at 0% 0%, #844eea 0%, #5527f5 50%, #041069 80%);
 }
 
 .page_container {
@@ -52,12 +51,12 @@ nav {
     display: flex;
     flex-direction: column;
 
-    gap: 16px;
+    gap: var(--medium_gap);
 }
 
 .nav__item {
     padding: 12px 24px;
-    border-radius: 16px;
+    border-radius: var(--base_border_radius);
 
     display: flex;
     justify-content: center;
@@ -67,9 +66,10 @@ nav {
 }
 
 .nav__link {
-    font-size: 24px;
+    font-size: 1.125rem;
     font-weight: 700;
     text-wrap: nowrap;
+    color: #0D0750;
 }
 
 #account {

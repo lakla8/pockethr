@@ -1,0 +1,91 @@
+{% extends 'base_generic.html' %}
+
+{% block title %} Стратегии {% endblock %} 
+
+{%block styles %} 
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/strategies.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <div class="page_container">
+        <nav>
+            <div class="nav__title">
+                Strategies
+            </div>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        Strategy
+                    </div>
+                    <div class="nav__item-open">
+                        v
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        All in one
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        Networking
+                    </div>
+                    <div class="nav__item-open">
+                        v
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">
+                        Job Search
+                    </div>
+                    <div class="nav__item-open">
+                        v
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <div class="tools">
+                <div class="tools__container">
+                    AI Tools
+                </div>
+            </div>
+            <div class="strategies">
+                <div class="block">
+                    <div class="block__strategy">
+                        Strategy
+                    </div>
+                    <div class="block__actions">
+                        <div class="block__action">Correct</div>
+                        <div class="block__action">Decline</div>
+                        <div class="block__action">Approval</div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="block__strategy">
+                        Strategy
+                    </div>
+                    <div class="block__actions">
+                        <div class="block__action">Correct</div>
+                        <div class="block__action">Decline</div>
+                        <div class="block__action">Approval</div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="block__strategy">
+                        Strategy
+                    </div>
+                    <div class="block__actions">
+                        <div class="block__action">Correct</div>
+                        <div class="block__action">Decline</div>
+                        <div class="block__action">Approval</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}
