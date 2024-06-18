@@ -35,5 +35,6 @@ urlpatterns = [
     path("strategies/", views.strategies_view, name='strategies'),
     path("client/networking/", views.client_in_networking_view),
     path("client/job_search/", views.client_in_job_search_view),
+    path('build_graph/', views.build_graph, name='build_graph')
     
 ]

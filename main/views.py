@@ -142,3 +142,6 @@ def save_account_info(request):
         return HttpResponse('Ok')
     except Exception as e:
         return HttpResponseBadRequest("Ошибка при обработке запроса.")
+
+def build_graph(request):
+    return render(request, "in_process.html")
