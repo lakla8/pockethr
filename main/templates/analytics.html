@@ -26,22 +26,26 @@
                     </div>
                     <ul class="subnav__list">
                         <li class="subnav__item">
-                            <div class="subnav__item-title">
+                            <div class="nav__item-title">
                                 All in one
                             </div>
                         </li>
                         <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                Networking
-                            </div>
+                            <a href="/networking/">
+                                <div class="nav__item-title">
+                                    Networking
+                                </div>
+                            </a>
                             <div class="subnav__item-open">
                                 v
                             </div>
                         </li>
                         <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                Job Search
-                            </div>
+                            <a href="/job_search/">
+                                <div class="nav__item-title">
+                                    Job Search
+                                </div>
+                            </a>
                             <div class="subnav__item-open">
                                 v
                             </div>
@@ -61,14 +65,14 @@
             </ul>
         </nav>
         <main>
-            <div class="tools">
-                <div class="tools__container">
-                    AI Tools
-                </div>
+            <div class="chart__container">
+                <canvas id="Chart" role="img">Your browser does not support the canvas element.</canvas>
             </div>
         </main>
     </div>
 {% endblock %}
-{% block scripts %}
 
+{% block scripts %}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{% static 'js/analytics.js' %}"></script>
 {% endblock %}
