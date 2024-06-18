@@ -1,15 +1,24 @@
 {% extends 'base_generic.html' %}
 {% block title %}
-  Trackers
+Trackers
 {% endblock %}
 {% load static %}
 {% block styles %}
-  <link rel="stylesheet" href="{% static 'css/trackers.css' %}" />
+<link rel="stylesheet" href="{% static 'css/trackers.css' %}" />
+<link rel="stylesheet" href="{% static 'css/tools.css' %}" />
 {% endblock %}
 {% block content %}
-  <div class="page_container">
-    <header class="header">
-      <div class="header__title">Trackers</div>
+<div class="page_container">
+    <header class="header" style="gap: 32px;">
+        <div class="header__title">Trackers</div>
+        <div class="tools">
+            <div class="tools__container">
+                <img src="{% static 'resources/ai.svg' %}" alt="">
+                <div class="tools__title">
+                    AI Tools
+                </div>
+            </div>
+        </div>
     </header>
     <main>
       <div class="columns__container">
@@ -25,5 +34,5 @@
         {% endfor %}
       </div>
     </main>
-  </div>
+</div>
 {% endblock %}
