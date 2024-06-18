@@ -6,6 +6,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/job_search.css' %}" />
     <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/tools.css' %}" />
 {% endblock %}
 
 {% block content %}
@@ -89,6 +90,12 @@
                 <div class="block">
                     Start Date
                 </div>
+                <div class="tools__container">
+                    <img src="{% static 'resources/ai.svg' %}" alt="">
+                    <div class="tools__title">
+                        AI Tools
+                    </div>
+                </div>
             </div>
             <div class="main__section">
                 <div class="main__block-container">
@@ -101,9 +108,7 @@
                         </div>
                     </div>
                     <div>
-                        <div class="main__block-fields">
-                            Company
-                        </div>
+                        <input type="text" name="" id="company" placeholder="Company" class="main__block-fields">
                     </div>
                 </div>
                 <div class="main__block-container">
@@ -116,14 +121,10 @@
                         </div>
                     </div>
                     <div>
-                        <div class="main__block-fields">
-                            Name
-                        </div>
+                        <input type="text" name="" id="first_name" placeholder="Name" class="main__block-fields">
                     </div>
                     <div>
-                        <div class="main__block-fields">
-                            Name
-                        </div>
+                        <input type="text" name="" id="second_name" placeholder="Name" class="main__block-fields">
                     </div>
                 </div>
                 <div class="main__block-container">
@@ -136,9 +137,7 @@
                         </div>
                     </div>
                     <div>
-                        <div class="main__block-fields">
-                            Link description
-                        </div>
+                        <input type="text" name="" id="link_description" placeholder="link_description" class="main__block-fields">
                     </div>
                 </div>
                 <div class="main__block-container">
@@ -151,9 +150,13 @@
                         </div>
                     </div>
                     <div>
-                        <div class="main__block-fields">
-                            Email
-                        </div>
+                        <input type="text" name="" id="email" placeholder="Email" class="main__block-fields">
+                    </div>
+                </div>
+
+                <div class="main__block-container">
+                    <div>
+                        <button id="job_search_send">Отправить</button>
                     </div>
                 </div>
             </div>
@@ -161,5 +164,5 @@
     </div>
 {% endblock %}
 {% block scripts %}
-
+    <script src="{% static 'js/job_search.js' %}"></script>
 {% endblock %}

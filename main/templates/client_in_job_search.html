@@ -6,6 +6,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/job_search.css' %}" />
     <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/tools.css' %}" />
 {% endblock %}
 
 {% block content %}
@@ -89,6 +90,13 @@
                 <div class="block">
                     Start Date
                 </div>
+                <div class="tools__container">
+                    <img src="{% static 'resources/ai.svg' %}" alt="">
+                    <div class="tools__title">
+                        AI Tools
+                    </div>
+                </div>
+                
             </div>
             <div class="main__section">
                 <div class="main__block-container">
