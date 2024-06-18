@@ -26,25 +26,22 @@
                     </div>
                     <ul class="subnav__list">
                         <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                All in one
-                            </div>
+                            <input type="text" placeholder="All in one" class="subnav__item-input" id="all_in_one">
                         </li>
                         <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                Networking
-                            </div>
+                            <input type="text" placeholder="Networking" class="subnav__item-input" id="networking">
                             <div class="subnav__item-open">
                                 v
                             </div>
                         </li>
                         <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                Job Search
-                            </div>
+                            <input type="text" placeholder="Job Search" class="subnav__item-input" id="job_search">
                             <div class="subnav__item-open">
                                 v
                             </div>
+                        </li>
+                        <li class="subnav__item">
+                            <button id="send_data" type="button" class="subnav__item-button">Отправить</button>
                         </li>
                     </ul>
                 </li>
@@ -61,14 +58,14 @@
             </ul>
         </nav>
         <main>
-            <div class="tools">
-                <div class="tools__container">
-                    AI Tools
-                </div>
+            <div class="chart__container">
+                <canvas id="Chart" role="img">Your browser does not support the canvas element.</canvas>
             </div>
         </main>
     </div>
 {% endblock %}
-{% block scripts %}
 
+{% block scripts %}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{% static 'js/analytics.js' %}"></script>
 {% endblock %}
