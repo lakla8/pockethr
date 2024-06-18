@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("root.css");
+
+*,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: var(--base_font_color);
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    font-weight: normal;
+    border-spacing: 0;
+    text-indent: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background: radial-gradient(circle at 0% 0%,
+            #844eea 0%,
+            #5527f5 50%,
+            #041069 80%);
+}
+
+.page_container {
+    width: 100%;
+    height: 100%;
+
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.page_content {
+    display: flex;
+    align-content: center;
+    flex: 1;
+    justify-content: center;
+}
+
+nav {
+    width: auto;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+
+    padding: 15px 30px;
+}
+
+.nav__title {
+    width: 160px;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 8px 18px;
+    border-radius: var(--base_border_radius);
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #D5C4F7;
+    color: #000;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--base_gap);
+}
+
+.nav__item {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+
+    gap: var(--base_gap);
+}
+
+.nav__item-inactive .nav__item-title{
+    background: #A281F2;
+    font-size: 20px;
+    color: #0d075038;
+}
+
+.nav__item-title {
+    width: 160px;
+    height: auto;
+
+    padding: 4px 12px;
+    border-radius: var(--base_border_radius);
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #d3c4f6;
+
+    text-wrap: nowrap;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__item-open {
+    width: auto;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: var(--base_border_radius);
+    padding: 0 16px;
+    background-color: #d3c4f6;
+    font-weight: 700;
+}

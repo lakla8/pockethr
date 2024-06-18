@@ -8,7 +8,7 @@ def home_view(request):
 
 def account_view(request):
     """Отображение шаблона страницы аккаунта."""
-    return HttpResponse('Ok')
+    return render(request, "my_account.html")
 
 
 def job_search_view(request):

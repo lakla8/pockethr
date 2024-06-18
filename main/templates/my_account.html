@@ -1,0 +1,54 @@
+{% extends 'base_generic.html' %}
+{% block title %}
+  My Account
+{% endblock %}
+{% load static %}
+{% block styles %}
+  <link rel="stylesheet" href="{% static 'css/my_account.css' %}" />
+{% endblock %}
+{% block content %}
+  <div class="page_container">
+    <div class="page__content">
+      <nav>
+        <div class="nav__title">My Account</div>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <div class="nav__item-title">Name</div>
+            <div class="nav__item-open">+</div>
+          </li>
+          <li class="nav__item">
+            <div class="nav__item-title">Personal info</div>
+          </li>
+          <li class="nav__item">
+            <div class="nav__item-title">Build Graph</div>
+          </li>
+          <li class="nav__item-inactive">
+            <div class="nav__item-title">position</div>
+          </li>
+          <li class="nav__item-inactive">
+            <div class="nav__item-title">role</div>
+          </li>
+          <li class="nav__item-inactive">
+            <div class="nav__item-title">interests</div>
+          </li>
+          <li class="nav__item-inactive">
+            <div class="nav__item-title">indusrty</div>
+          </li>
+          <li class="nav__item-inactive">
+            <div class="nav__item-title">location</div>
+          </li>
+          <li class="nav__item-inactive">
+            <div class="nav__item-title">company</div>
+          </li>
+          <li class="nav__item-inactive">
+            <div class="nav__item-title">goals</div>
+          </li>
+        </ul>
+      </nav>
+      <div class=""></div>
+    </div>
+    <main>
+      <img src="{% static 'image/bg-preview.png' %}" alt="" />
+    </main>
+  </div>
+{% endblock %}
