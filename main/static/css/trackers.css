@@ -84,7 +84,7 @@ main {
 .column {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 80px;
 }
 
 .column__title {
@@ -99,13 +99,18 @@ main {
 .column__items {
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 10px;
 }
 
 .column__item {
+  min-height: 54px;
+  text-align: center;
+  padding: 0px 20px;
   background: #d5c4f74d;
   color: #0d075038;
   border-radius: 20px;
-  font-size: 28px;
-  text-align: center;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
