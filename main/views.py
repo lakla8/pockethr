@@ -36,7 +36,7 @@ def strategies_view(request):
 
 def trackers_view(request):
     """Отображение шаблона страницы трекеров."""
-    return HttpResponse('Ok')
+    return render(request, "trackers.html")
 
 
 def analytics_view(request):
