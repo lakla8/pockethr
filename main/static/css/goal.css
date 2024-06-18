@@ -48,51 +48,100 @@ main {
     height: auto;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 0 32px;
 }
 
-.actions {
-    width: auto;
-    height: 100%;
+.main__section {
+    width: 100%;
+    height: auto;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding: 32px 0;
+    gap: 32px;
 }
 
-.actions__container {
+.main__block-container {
+    width: auto;
+    height: auto;
+
     display: flex;
     flex-direction: column;
     gap: var(--base_gap);
 }
 
-.action {
-    width: 160px;
+.main__block {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+
+    gap: var(--base_gap);
+}
+
+.main__block-title {
+    width: auto;
     height: auto;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 8px 18px;
+    padding: 4px 24px;
     border-radius: var(--base_border_radius);
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 700;
-    background-color: #958CEB;
-    color: #0D0750;
-}
-
-.bg__image {
-    width: 100%;
-    height: auto;
+    background-color: #d3c4f6;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.bg__image > img {
-    width: 60%;
+.main__block-add {
+    width: auto;
     height: auto;
+    max-height: 32.8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: var(--base_border_radius);
+    padding: 0 16px;
+    font-size: 1.125rem;
+    background-color: #d3c4f6;
+    font-weight: 700;
+}
+
+.main__block-fields {
+    width: auto;
+    height: auto;
+
+    padding: 4px 24px;
+    border-radius: var(--base_border_radius);
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: rgba(211, 196, 246, 0.65);
+    color: #6866E1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#send_goal {
+    width: auto;
+    height: auto;
+
+    padding: 4px 24px;
+    border-radius: var(--base_border_radius);
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #d3c4f6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
 }

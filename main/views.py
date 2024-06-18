@@ -36,6 +36,10 @@ def networking_view(request):
 
 def strategies_view(request):
     """Отображение шаблона страницы стратегий."""
+    # url = "http://127.0.0.1:9999/"
+    # response = requests.get(url)
+    # print(json.loads(response.text))
+    
     return render(request, "strategies.html")
 
 
@@ -66,10 +70,33 @@ def client_in_networking_view(request):
 
 def goal_view(request):
     """Отображение шаблона страницы целей."""
-    return HttpResponse('Ok')
+    return render(request, "goal.html")
 
+def goal_data(request):
+    if request.method != "POST":
+        return HttpResponseBadRequest("Invalid request method.")
+    try:
+        data = json.loads(request.body.decode("utf-8"))
+        
+        print(data)
+        return HttpResponse('Ok')
+        # url = "http://127.0.0.1:9999/algorithm?id_const=true"
+        # headers = {
+        #     "Content-type": "application/json",
+        #     "Accept": "application/json",
+        #     "Content-Encoding": "utf-8"
+        # }
+
+        # response = requests.post(url,
+        #                          data=json.dumps(information), headers=headers
+        #                          )
+        #
+        # print(json.loads(response.text))
+    except Exception as e:
+        return HttpResponseBadRequest("Ошибка при обработке запроса.")
+    
+    
 def analytics_api(request):
-    """Обращение в API, которая возвращает список рекомендованных мест."""
     if request.method != "POST":
         return HttpResponseBadRequest("Invalid request method.")
 

@@ -29,6 +29,7 @@ urlpatterns = [
     path("analytics/", views.analytics_view, name='analytics'),
     path("analytics/save_data/", views.analytics_api),
     path("goal/", views.goal_view, name='goal'),
+    path("goal/data/", views.goal_data),
     path("trackers/", views.trackers_view, name='trackers'),
     path("strategies/", views.strategies_view, name='strategies'),
     path("client/networking/", views.client_in_networking_view),

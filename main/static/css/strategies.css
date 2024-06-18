@@ -52,26 +52,6 @@ main {
     padding: 0 32px;
 }
 
-.tools {
-    width: auto;
-    height: auto;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.tools__container {
-    width: auto;
-    height: auto;
-
-    padding: 4px 24px;
-    border-radius: var(--base_border_radius);
-
-    font-size: 1rem;
-    font-weight: 700;
-    background-color: #d3c4f6;
-}
-
 .strategies {
     width: 100%;
     height: auto;
