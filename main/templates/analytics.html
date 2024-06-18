@@ -5,6 +5,7 @@
 {%block styles %} 
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/analytics.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
 {% endblock %}
 
 {% block content %}
@@ -15,33 +16,47 @@
             </div>
             <ul class="nav__list">
                 <li class="nav__item">
-                    <div class="nav__item-title">
-                        Dashboards
+                    <div class="nav__item-container">
+                        <div class="nav__item-title">
+                            Dashboards
+                        </div>
+                        <div class="nav__item-open">
+                            v
+                        </div>
                     </div>
-                    <div class="nav__item-open">
-                        v
-                    </div>
+                    <ul class="subnav__list">
+                        <li class="subnav__item">
+                            <div class="subnav__item-title">
+                                All in one
+                            </div>
+                        </li>
+                        <li class="subnav__item">
+                            <div class="subnav__item-title">
+                                Networking
+                            </div>
+                            <div class="subnav__item-open">
+                                v
+                            </div>
+                        </li>
+                        <li class="subnav__item">
+                            <div class="subnav__item-title">
+                                Job Search
+                            </div>
+                            <div class="subnav__item-open">
+                                v
+                            </div>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav__item">
-                    <div class="nav__item-title">
-                        All in one
-                    </div>
-                </li>
-                <li class="nav__item">
-                    <div class="nav__item-title">
-                        Networking
-                    </div>
-                    <div class="nav__item-open">
-                        v
-                    </div>
-                </li>
-                <li class="nav__item">
-                    <div class="nav__item-title">
-                        Job Search
-                    </div>
-                    <div class="nav__item-open">
-                        v
-                    </div>
+                    <a href="/">
+                        <div class="nav__item-container">
+                            <div class="nav__item-title">
+                                Back
+                                <img src="{% static 'resources/home.svg' %}" alt="">
+                            </div>
+                        </div>
+                    </a>
                 </li>
             </ul>
         </nav>

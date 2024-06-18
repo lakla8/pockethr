@@ -1,6 +1,6 @@
 {% extends 'base_generic.html' %}
 
-{% block title %} Клиенты {% endblock %} 
+{% block title %} Поиск работы {% endblock %} 
 
 {%block styles %} 
     {% load static %}
@@ -12,22 +12,24 @@
     <div class="page_container">
         <nav>
             <div class="nav__title">
-                My Clients
+                Job Search
             </div>
             <ul class="nav__list">
                 <li class="nav__item">
                     <div class="nav__item-container">
                         <div class="nav__item-title">
-                            Client
+                            Search
                         </div>
-                        <div class="nav__item-open">
-                            >
-                        </div>
+                        <a href="/job_search/search/">
+                            <div class="nav__item-open">
+                                >
+                            </div>
+                        </a>
                     </div>
                     <ul class="subnav__list">
                         <li class="subnav__item">
                             <div class="subnav__client-title">
-                                Client 1
+                                Search 1
                             </div>
                             <div class="subnav__item-open">
                                 +
@@ -35,54 +37,7 @@
                         </li>
                         <li class="subnav__item">
                             <div class="subnav__client-title">
-                                Client 2
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav__item">
-                    <div class="nav__item-container">
-                        <div class="nav__item-title">
-                            Build Graph
-                        </div>
-                        <div class="nav__item-open">
-                            v
-                        </div>
-                    </div>
-                    <ul class="subnav__list">
-                        <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                position
-                            </div>
-                        </li>
-                        <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                role
-                            </div>
-                        </li>
-                        <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                interests
-                            </div>
-                        </li>
-                        <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                industry
-                            </div>
-                        </li>
-                        <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                location
-                            </div>
-                        </li>
-                        <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                client
-                            </div>
-                        </li>
-                        <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                goals
+                                Search 1
                             </div>
                         </li>
                     </ul>

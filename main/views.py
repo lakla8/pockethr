@@ -13,12 +13,11 @@ def account_view(request):
 
 def job_search_view(request):
     """Отображение шаблона страницы поиска вакансий."""
-    return render(request, "job_search.html")
+    return render(request, "job_search_view.html")
 
 
 def job_search(request):
-    """Обработка запроса поиска вакансий (возможно, дубликат job_search_view)."""
-    return HttpResponse('Ok')
+    return render(request, "job_search.html")
 
 
 def clients_view(request):
@@ -52,7 +51,7 @@ def personal_information_view(request):
 
 def client_in_job_search_view(request):
     """Отображение шаблона страницы клиента в поиске работы."""
-    return HttpResponse('Ok')
+    return render(request, 'client_in_job_search.html')
 
 
 def client_in_networking_view(request):
