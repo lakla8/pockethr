@@ -120,7 +120,6 @@ nav {
 
 .nav__item-open {
     width: auto;
-    height: 100%;
 
     display: flex;
     justify-content: center;
