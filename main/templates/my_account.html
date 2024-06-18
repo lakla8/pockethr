@@ -1,54 +1,91 @@
 {% extends 'base_generic.html' %}
+
 {% block title %}
-  My Account
+My Account
 {% endblock %}
+
 {% load static %}
-{% block styles %}
-  <link rel="stylesheet" href="{% static 'css/my_account.css' %}" />
+    {% block styles %}
+    <link rel="stylesheet" href="{% static 'css/my_account.css' %}" />
 {% endblock %}
+
 {% block content %}
-  <div class="page_container">
+<div class="page_container">
     <div class="page__content">
-      <nav>
-        <div class="nav__title">My Account</div>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <div class="nav__item-title">Name</div>
-            <div class="nav__item-open">+</div>
-          </li>
-          <li class="nav__item">
-            <div class="nav__item-title">Personal info</div>
-          </li>
-          <li class="nav__item">
-            <div class="nav__item-title">Build Graph</div>
-          </li>
-          <li class="nav__item-inactive">
-            <div class="nav__item-title">position</div>
-          </li>
-          <li class="nav__item-inactive">
-            <div class="nav__item-title">role</div>
-          </li>
-          <li class="nav__item-inactive">
-            <div class="nav__item-title">interests</div>
-          </li>
-          <li class="nav__item-inactive">
-            <div class="nav__item-title">indusrty</div>
-          </li>
-          <li class="nav__item-inactive">
-            <div class="nav__item-title">location</div>
-          </li>
-          <li class="nav__item-inactive">
-            <div class="nav__item-title">company</div>
-          </li>
-          <li class="nav__item-inactive">
-            <div class="nav__item-title">goals</div>
-          </li>
-        </ul>
-      </nav>
-      <div class=""></div>
+        <nav>
+            <div class="nav__title">My Account</div>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <div class="nav__item-title">Name</div>
+                    <div class="nav__item-open">+</div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">Personal info</div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-title">Build Graph</div>
+                </li>
+                <li class="nav__item-inactive">
+                    {% if position == "None" %}
+                        <input type="text" name="" id="position" placeholder="position" class="nav__item-title">
+                    {% else %}
+                        <input type="text" name="" id="position" placeholder="{{ position }}" class="nav__item-title">
+                    {% endif %}
+                </li>
+                <li class="nav__item-inactive">
+                    {% if role == "None" %}
+                        <input type="text" name="" id="role" placeholder="role" class="nav__item-title">
+                    {% else %}
+                    <input type="text" name="" id="role" placeholder="{{ role }}" class="nav__item-title">
+                    {% endif %}
+                </li>
+                <li class="nav__item-inactive">
+                    {% if interests == "None" %}
+                        <input type="text" name="" id="interests" placeholder="interests" class="nav__item-title">
+                    {% else %}
+                        <input type="text" name="" id="interests" placeholder="{{ interests }}" class="nav__item-title">
+                    {% endif %}
+                </li>
+                <li class="nav__item-inactive">
+                    {% if indusrty == "None" %}
+                        <input type="text" name="" id="indusrty" placeholder="indusrty" class="nav__item-title">
+                    {% else %}
+                        <input type="text" name="" id="indusrty" placeholder="{{ indusrty }}" class="nav__item-title">
+                    {% endif %}
+                </li>
+                <li class="nav__item-inactive">
+                    {% if location == "None" %}
+                        <input type="text" name="" id="location" placeholder="location" class="nav__item-title">
+                    {% else %}
+                        <input type="text" name="" id="location" placeholder="{{ location }}" class="nav__item-title">
+                    {% endif %}
+                </li>
+                <li class="nav__item-inactive">
+                    {% if company == "None" %}
+                        <input type="text" name="" id="company" placeholder="company" class="nav__item-title">
+                    {% else %}
+                        <input type="text" name="" id="company" placeholder="{{ company }}" class="nav__item-title">
+                    {% endif %}
+                </li>
+                <li class="nav__item-inactive">
+                    {% if goals == "None" %}
+                        <input type="text" name="" id="goals" placeholder="goals" class="nav__item-title">
+                    {% else %}
+                        <input type="text" name="" id="goals" placeholder="{{ goals }}" class="nav__item-title">
+                    {% endif %}
+                </li>
+                <li class="nav__item-inactive">
+                    <button type="button" id="save_account_info" class="nav__item-button">Сохранить</button>
+                </li>
+            </ul>
+        </nav>
+        <div class=""></div>
     </div>
     <main>
-      <img src="{% static 'image/bg-preview.png' %}" alt="" />
+        <img src="{% static 'image/bg-preview.png' %}" alt="" />
     </main>
-  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+    <script src="{% static 'js/account.js' %}"></script>
 {% endblock %}

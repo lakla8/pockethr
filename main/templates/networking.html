@@ -1,0 +1,77 @@
+{% extends 'base_generic.html' %}
+
+{% block title %} Networking {% endblock %} 
+
+{%block styles %} 
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/clients.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <div class="page_container">
+        <nav>
+            <div class="nav__title">
+                Networking
+            </div>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <div class="nav__item-container">
+                        <div class="nav__item-title">
+                            Goals
+                        </div>
+                        <div class="nav__item-open">
+                            >
+                        </div>
+                    </div>
+                    <ul class="subnav__list">
+                        <li class="subnav__item">
+                            <div class="subnav__client-title">
+                                Goals 1
+                            </div>
+                            <div class="subnav__item-open">
+                                +
+                            </div>
+                        </li>
+                        <li class="subnav__item">
+                            <div class="subnav__client-title">
+                                Goals 2
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="/">
+                        <div class="nav__item-container">
+                            <div class="nav__item-title">
+                                Back
+                                <img src="{% static 'resources/home.svg' %}" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <div class="actions">
+                <div class="actions__container">
+                    <a class="actoin__link" href="/strategies/">
+                        <div class="action">Strategies</div>
+                    </a>
+                    <a class="actoin__link" href="/trackers/">
+                        <div class="action">Trackers</div>
+                    </a>
+                    <a class="actoin__link" href="/analytics/">
+                        <div class="action">Analytics</div>
+                    </a>
+                </div>
+            </div>
+            <div class="bg__image">
+                <img src="{% static 'image/bg-preview.png' %}" alt="">
+            </div>
+        </main>
+    </div>
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

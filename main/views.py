@@ -13,7 +13,9 @@ def home_view(request):
 
 def account_view(request):
     """Отображение шаблона страницы аккаунта."""
-    return render(request, "my_account.html")
+    with open("main/static/database/database.json", "r+", encoding="utf-8") as file:
+        data = json.load(file)
+    return render(request, "my_account.html", context=data)
 
 
 def job_search_view(request):
@@ -31,15 +33,15 @@ def clients_view(request):
 
 
 def networking_view(request):
-    return HttpResponse('Ok')
+    return render(request, "networking.html")
 
 
 def strategies_view(request):
     """Отображение шаблона страницы стратегий."""
-    # url = "http://127.0.0.1:9999/"
+    # url = "http://127.0.0.1:9999/strategy/"
     # response = requests.get(url)
     # print(json.loads(response.text))
-    
+
     return render(request, "strategies.html")
 
 
@@ -63,6 +65,10 @@ def client_in_job_search_view(request):
     return render(request, 'client_in_job_search.html')
 
 
+def account_info_view(request):
+    return render(request, "account_info.html")
+
+
 def client_in_networking_view(request):
     """Отображение шаблона страницы клиента в нетворкинге."""
     return HttpResponse('Ok')
@@ -72,15 +78,16 @@ def goal_view(request):
     """Отображение шаблона страницы целей."""
     return render(request, "goal.html")
 
+
 def goal_data(request):
     if request.method != "POST":
         return HttpResponseBadRequest("Invalid request method.")
     try:
         data = json.loads(request.body.decode("utf-8"))
-        
+
         print(data)
         return HttpResponse('Ok')
-        # url = "http://127.0.0.1:9999/algorithm?id_const=true"
+        # url = "http://127.0.0.1:9999/goal/"
         # headers = {
         #     "Content-type": "application/json",
         #     "Accept": "application/json",
@@ -94,30 +101,14 @@ def goal_data(request):
         # print(json.loads(response.text))
     except Exception as e:
         return HttpResponseBadRequest("Ошибка при обработке запроса.")
-    
-    
-def analytics_api(request):
-    if request.method != "POST":
-        return HttpResponseBadRequest("Invalid request method.")
 
+
+def analytics_api(request):
     try:
         data = json.loads(request.body.decode("utf-8"))
-        print(data)
         return HttpResponse('Ok')
-        # features = [item for item in data["features"]
-        #             if data["features"][item] == "1"]
+        # url = "http://127.0.0.1:9999/analytics/"
 
-        # users_recommendations = [
-        #     [item["id"] for item in UserProfile.objects.get(user=user).recommendations if item["is_selected"] == "1"]
-        #     for user in meet.users.all()
-        # ]
-
-        # information = {
-        #     "features": features,
-        #     "users_recommendations": users_recommendations
-        # }
-
-        # url = "http://127.0.0.1:9999/algorithm?id_const=true"
         # headers = {
         #     "Content-type": "application/json",
         #     "Accept": "application/json",
@@ -127,19 +118,27 @@ def analytics_api(request):
         # response = requests.post(url,
         #                          data=json.dumps(information), headers=headers
         #                          )
+    except Exception as e:
+        return HttpResponseBadRequest("Ошибка при обработке запроса.")
 
-        # place_id = [item[0] for item in json.loads(response.text)['result']]
-        # places_object = [Place.objects.filter(location_id=value)[0] for value in place_id]
-        # place = [{
-        #     "path_image": place.path_image,
-        #     "id": place.id,
-        #     "name": place.name,
-        #     "rating": float(place.rating)
-        # } for place in places_object]
 
-        # meet.recommendations = place
-        # meet.save(update_fields=["recommendations"])
+def save_account_info(request):
+    if request.method != "POST":
+        return HttpResponseBadRequest("Invalid request method.")
 
-        # return JsonResponse({"meet_id": meet_id})
+    try:
+        new_data = json.loads(request.body.decode("utf-8"))
+
+        with open("main/static/database/database.json", "r+", encoding="utf-8") as file:
+            data = json.load(file)
+
+        for key in data.keys():
+            if new_data[key] != '':
+                data[key] = new_data[key]
+
+        with open("main/static/database/database.json", "w+", encoding="utf-8") as file:
+            json.dump(data, file, ensure_ascii=False)
+
+        return HttpResponse('Ok')
     except Exception as e:
         return HttpResponseBadRequest("Ошибка при обработке запроса.")

@@ -95,9 +95,35 @@ nav {
     gap: var(--base_gap);
 }
 
-.nav__item-inactive .nav__item-title{
+.nav__item-inactive .nav__item-title {
     background: #A281F2;
-    color: #0d075038;
+    color: #6866E1;
+    font-size: 1rem;
+    text-align: center;
+    font-style: italic;
+}
+
+::placeholder {
+    color: #6866E1;
+}
+
+.nav__item-button {
+    width: 160px;
+    height: auto;
+
+    padding: 4px 12px;
+    border-radius: var(--base_border_radius);
+    font-size: 1.125rem;
+    font-weight: 700;
+    background-color: #d3c4f6;
+
+    text-wrap: nowrap;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
 }
 
 .nav__item-title {
