@@ -21,104 +21,18 @@ Trackers
         </div>
     </header>
     <main>
-        <div class="columns__container">
-            <div class="column">
-                <div class="column__title">Gaols</div>
-                <div class="column__items">
-                    <div class="column__item">Correct</div>
-                    <div class="column__item">Correct</div>
-                    <div class="column__item">Correct</div>
-                    <div class="column__item">Correct</div>
-                    <div class="column__item">Correct</div>
-                    <div class="column__item">Correct</div>
-                    <div class="column__item">Correct</div>
-                </div>
+      <div class="columns__container">
+        {% for key, values in data.items %}
+          <div class="column">
+            <div class="column__title">{{ key|title }}</div>
+            <div class="column__items">
+              {% for value in values %}
+                <div class="column__item">{{ value }}</div>
+              {% endfor %}
             </div>
-            <div class="column">
-                <div class="column__title">Names</div>
-                <div class="column__items">
-                    <div class="column__item">Decline</div>
-                    <div class="column__item">Decline</div>
-                    <div class="column__item">Decline</div>
-                    <div class="column__item">Decline</div>
-                    <div class="column__item">Decline</div>
-                    <div class="column__item">Decline</div>
-                    <div class="column__item">Decline</div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="column__title">Company</div>
-                <div class="column__items">
-                    <div class="column__item">Approval</div>
-                    <div class="column__item">Approval</div>
-                    <div class="column__item">Approval</div>
-                    <div class="column__item">Approval</div>
-                    <div class="column__item">Approval</div>
-                    <div class="column__item">Approval</div>
-                    <div class="column__item">Approval</div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="column__title">Referral</div>
-                <div class="column__items">
-                    <div class="column__item">Correct</div>
-                    <div class="column__item">Correct</div>
-                    <div class="column__item">Correct</div>
-                    <div class="column__item">Correct</div>
-                    <div class="column__item">Correct</div>
-                    <div class="column__item">Correct</div>
-                    <div class="column__item">Correct</div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="column__title">Date</div>
-                <div class="column__items">
-                    <div class="column__item">Decline</div>
-                    <div class="column__item">Decline</div>
-                    <div class="column__item">Decline</div>
-                    <div class="column__item">Decline</div>
-                    <div class="column__item">Decline</div>
-                    <div class="column__item">Decline</div>
-                    <div class="column__item">Decline</div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="column__title">Interview</div>
-                <div class="column__items">
-                    <div class="column__item">Approval</div>
-                    <div class="column__item">Approval</div>
-                    <div class="column__item">Approval</div>
-                    <div class="column__item">Approval</div>
-                    <div class="column__item">Approval</div>
-                    <div class="column__item">Approval</div>
-                    <div class="column__item">Approval</div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="column__title">Call</div>
-                <div class="column__items">
-                    <div class="column__item">Correct</div>
-                    <div class="column__item">Correct</div>
-                    <div class="column__item">Correct</div>
-                    <div class="column__item">Correct</div>
-                    <div class="column__item">Correct</div>
-                    <div class="column__item">Correct</div>
-                    <div class="column__item">Correct</div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="column__title">Meeting</div>
-                <div class="column__items">
-                    <div class="column__item">Decline</div>
-                    <div class="column__item">Decline</div>
-                    <div class="column__item">Decline</div>
-                    <div class="column__item">Decline</div>
-                    <div class="column__item">Decline</div>
-                    <div class="column__item">Decline</div>
-                    <div class="column__item">Decline</div>
-                </div>
-            </div>
-        </div>
+          </div>
+        {% endfor %}
+      </div>
     </main>
 </div>
 {% endblock %}

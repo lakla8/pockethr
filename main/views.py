@@ -44,11 +44,14 @@ def strategies_view(request):
 
     return render(request, "strategies.html")
 
-
 def trackers_view(request):
     """Отображение шаблона страницы трекеров."""
-    return render(request, "trackers.html")
-
+    with open('main/static/resources/trackers.json', 'rb') as file:
+        data = json.load(file)
+    context = {
+        'data': data
+    }
+    return render(request, "trackers.html", context=context)
 
 def analytics_view(request):
     """Отображение шаблона страницы аналитики."""
