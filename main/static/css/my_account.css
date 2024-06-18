@@ -97,7 +97,6 @@ nav {
 
 .nav__item-inactive .nav__item-title{
     background: #A281F2;
-    font-size: 20px;
     color: #0d075038;
 }
 
@@ -107,7 +106,7 @@ nav {
 
     padding: 4px 12px;
     border-radius: var(--base_border_radius);
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 700;
     background-color: #d3c4f6;
 
