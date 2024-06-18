@@ -1,10 +1,10 @@
 {% extends 'base_generic.html' %}
 
-{% block title %} Поиск работы {% endblock %} 
+{% block title %} Клиенты {% endblock %} 
 
 {%block styles %} 
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/job_search.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/goal.css' %}" />
     <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
 {% endblock %}
 
@@ -12,59 +12,78 @@
     <div class="page_container">
         <nav>
             <div class="nav__title">
-                Job Search
+                Goal
             </div>
             <ul class="nav__list">
                 <li class="nav__item">
                     <div class="nav__item-container">
                         <div class="nav__item-title">
-                            Position
+                            Location
                         </div>
-                        <div class="nav__item-open">
-                            +
-                        </div>    
-                    </div>
-                    <ul class="subnav__list">
-                        <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                name position
-                            </div>
-                        </li>
-                        <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                name position
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav__item">
-                    <div class="nav__item-title">
-                        Location
-                    </div>
-                </li>
-                <li class="nav__item">
-                    <div class="nav__item-title">
-                        Industry
-                    </div>
-                </li>
-                <li class="nav__item">
-                    <div class="nav__item-title">
-                        Salary range
                     </div>
                 </li>
                 <li class="nav__item">
                     <div class="nav__item-container">
                         <div class="nav__item-title">
-                            Specifics
+                            Industry
                         </div>
-                        <div class="nav__item-open">
-                            +
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-container">
+                        <div class="nav__item-title">
+                            Position
+                        </div>
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__item-container">
+                        <div class="nav__item-title">
+                            People
+                        </div>
+                        <div class="subnav__item-open">
+                            v
                         </div>
                     </div>
                     <ul class="subnav__list">
                         <li class="subnav__item">
                             <div class="subnav__item-title">
-                                specifics
+                                1st round
+                            </div>
+                            <div class="subnav__item-open">
+                                +
+                            </div>
+                        </li>
+                        <li class="subnav__item">
+                            <div class="subnav__item-title">
+                                2st round
+                            </div>
+                            <div class="subnav__item-open">
+                                +
+                            </div>
+                        </li>
+                        <li class="subnav__item">
+                            <div class="subnav__item-title">
+                                3st round
+                            </div>
+                            <div class="subnav__item-open">
+                                +
+                            </div>
+                        </li>
+                        <li class="subnav__item">
+                            <div class="subnav__item-title">
+                                4st round
+                            </div>
+                            <div class="subnav__item-open">
+                                +
+                            </div>
+                        </li>
+                        <li class="subnav__item">
+                            <div class="subnav__item-title">
+                                5st round
+                            </div>
+                            <div class="subnav__item-open">
+                                +
                             </div>
                         </li>
                     </ul>
@@ -82,14 +101,6 @@
             </ul>
         </nav>
         <main>
-            <div class="header__section">
-                <div class="block">
-                    Name/ Position
-                </div>
-                <div class="block">
-                    Start Date
-                </div>
-            </div>
             <div class="main__section">
                 <div class="main__block-container">
                     <div class="main__block">
@@ -101,9 +112,7 @@
                         </div>
                     </div>
                     <div>
-                        <div class="main__block-fields">
-                            Company
-                        </div>
+                        <input type="text" name="" id="company" placeholder="Company" class="main__block-fields">
                     </div>
                 </div>
                 <div class="main__block-container">
@@ -116,14 +125,7 @@
                         </div>
                     </div>
                     <div>
-                        <div class="main__block-fields">
-                            Name
-                        </div>
-                    </div>
-                    <div>
-                        <div class="main__block-fields">
-                            Name
-                        </div>
+                        <input type="text" name="" id="name" placeholder="Name" class="main__block-fields">
                     </div>
                 </div>
                 <div class="main__block-container">
@@ -136,30 +138,16 @@
                         </div>
                     </div>
                     <div>
-                        <div class="main__block-fields">
-                            Link description
-                        </div>
+                        <input type="text" name="" id="link_description" placeholder="Link description" class="main__block-fields">
                     </div>
                 </div>
-                <div class="main__block-container">
-                    <div class="main__block">
-                        <div class="main__block-title">
-                            Synchronization 
-                        </div>
-                        <div class="main__block-add">
-                            +
-                        </div>
-                    </div>
-                    <div>
-                        <div class="main__block-fields">
-                            Email
-                        </div>
-                    </div>
+                <div>
+                    <button id="send_goal">Отправить</button>
                 </div>
             </div>
         </main>
     </div>
 {% endblock %}
 {% block scripts %}
-
+    <script src="{% static 'js/goal.js' %}"></script>
 {% endblock %}
