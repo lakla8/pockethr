@@ -49,6 +49,57 @@ nav {
 
     gap: var(--base_gap);
 }
+input {
+    all: unset;
+  }
+
+.subnav__item-input {
+    width: 160px;
+    height: auto;
+
+    padding: 4px 12px;
+    border-radius: var(--base_border_radius);
+
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1rem;
+    font-style: italic;
+    color: #6866E1;
+    background-color: rgba(211, 196, 246, 0.65);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+::placeholder {
+    color: #6866E1;
+}
+
+.subnav__item-button {
+    width: 160px;
+    height: auto;
+
+    padding: 4px 12px;
+    border-radius: var(--base_border_radius);
+
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1rem;
+    font-style: italic;
+    color: #6866E1;
+    background-color: rgba(211, 196, 246, 0.65);
+    box-sizing: border-box;
+    text-align: center;
+
+    cursor: pointer;
+}
 
 .subnav__item-title,
 .nav__item-title,
