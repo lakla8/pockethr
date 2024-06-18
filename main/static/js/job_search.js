@@ -20,20 +20,18 @@ $(document).ready(function () {
     // Получаем CSRF-токен из cookie
     const csrftoken = getCookie("csrftoken");
 
-    $("#save_account_info").click(() => {
+    $("#job_search_send").click(() => {
         const data = {
-            position: $("#position").val(),
-            role: $("#role").val(),
-            interests: $("#interests").val(),
-            indusrty: $("#indusrty").val(),
-            location: $("#location").val(),
             company: $("#company").val(),
-            goals: $("#goals").val(),
+            first_name: $("#first_name").val(),
+            second_name: $("#second_name").val(),
+            link_description: $("#link_description").val(),
+            email: $("#email").val(),
         };
         // Преобразуем объект JSON в строку
         const jsonData = JSON.stringify(data);
         $.ajax({
-            url: `/account/save/`,
+            url: `/job_search/save/`,
             type: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -142,3 +142,21 @@ def save_account_info(request):
         return HttpResponse('Ok')
     except Exception as e:
         return HttpResponseBadRequest("Ошибка при обработке запроса.")
+
+
+def in_development(request):
+    return render(request, "in_development.html")
+
+
+def save_job_search(request):
+    if request.method != "POST":
+        return HttpResponseBadRequest("Invalid request method.")
+
+    try:
+        data = json.loads(request.body.decode("utf-8"))
+        with open("main/static/database/job_search.json", "w+", encoding="utf-8") as file:
+            json.dump(data, file, ensure_ascii=False)
+
+        return HttpResponse('Ok')
+    except Exception as e:
+        return HttpResponseBadRequest("Ошибка при обработке запроса.")

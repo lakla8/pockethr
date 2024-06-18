@@ -21,10 +21,11 @@ from . import views
 urlpatterns = [
     path("", views.home_view, name='home'),
     path("account/", views.account_view, name='account'),
-    path("account/save/", views.save_account_info, name='account'),
+    path("account/save/", views.save_account_info),
     path("account/info/", views.account_info_view),
     path("job_search/", views.job_search_view, name='job_search_view'),
     path("job_search/search/", views.job_search, name='job_search'),
+    path("job_search/save/", views.save_job_search),
     path("networking/", views.networking_view, name='networking'),
     path("clients/", views.clients_view, name='clients'),
     path("analytics/", views.analytics_view, name='analytics'),
@@ -35,5 +36,6 @@ urlpatterns = [
     path("strategies/", views.strategies_view, name='strategies'),
     path("client/networking/", views.client_in_networking_view),
     path("client/job_search/", views.client_in_job_search_view),
+    path("in_development/", views.in_development)
     
 ]

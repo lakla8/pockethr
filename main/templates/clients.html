@@ -6,6 +6,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/clients.css' %}" />
     <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/tools.css' %}" />
 {% endblock %}
 
 {% block content %}
@@ -51,39 +52,25 @@
                     </div>
                     <ul class="subnav__list">
                         <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                position
-                            </div>
+                            <input type="text" placeholder="position" class="subnav__item-input">
                         </li>
                         <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                role
-                            </div>
+                            <input type="text" placeholder="role" class="subnav__item-input">
                         </li>
                         <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                interests
-                            </div>
+                            <input type="text" placeholder="interests" class="subnav__item-input">
                         </li>
                         <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                industry
-                            </div>
+                            <input type="text" placeholder="industry" class="subnav__item-input">
                         </li>
                         <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                location
-                            </div>
+                            <input type="text" placeholder="location" class="subnav__item-input">
                         </li>
                         <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                client
-                            </div>
+                            <input type="text" placeholder="client" class="subnav__item-input">
                         </li>
                         <li class="subnav__item">
-                            <div class="subnav__item-title">
-                                goals
-                            </div>
+                            <input type="text" placeholder="goals" class="subnav__item-input">
                         </li>
                     </ul>
                 </li>
@@ -101,6 +88,14 @@
         </nav>
         <main>
             <div class="actions">
+                <div class="tools">
+                    <div class="tools__container">
+                        <img src="{% static 'resources/ai.svg' %}" alt="">
+                        <div class="tools__title">
+                            AI Tools
+                        </div>
+                    </div>
+                </div>
                 <div class="actions__container">
                     <a class="actoin__link" href="/strategies/">
                         <div class="action">Strategies</div>

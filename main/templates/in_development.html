@@ -1,0 +1,28 @@
+{% extends 'base_generic.html' %}
+
+{% block title %} В разработке {% endblock %} 
+
+{%block styles %} 
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <div class="page_container_test">
+        В разработке
+        <div class="nav__item">
+            <a href="/">
+                <div class="nav__item-container">
+                    <div class="nav__item-title">
+                        Back
+                        <img src="{% static 'resources/home.svg' %}" alt="">
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
