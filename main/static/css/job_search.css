@@ -57,6 +57,7 @@ main {
     height: auto;
 
     display: flex;
+    align-items: center;
     flex-direction: row;
     
     gap: var(--base_gap);
@@ -150,4 +151,21 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#job_search_send {
+    width: auto;
+    height: auto;
+
+    padding: 4px 24px;
+    border-radius: var(--base_border_radius);
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #d3c4f6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
 }

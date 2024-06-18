@@ -6,6 +6,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/clients.css' %}" />
     <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/tools.css' %}" />
 {% endblock %}
 
 {% block content %}
@@ -20,9 +21,11 @@
                         <div class="nav__item-title">
                             Goals
                         </div>
-                        <div class="nav__item-open">
-                            >
-                        </div>
+                        <a href="/in_development/">
+                            <div class="nav__item-open">
+                                >
+                            </div>
+                        </a>
                     </div>
                     <ul class="subnav__list">
                         <li class="subnav__item">
@@ -54,6 +57,14 @@
         </nav>
         <main>
             <div class="actions">
+                <div class="tools">
+                    <div class="tools__container">
+                        <img src="{% static 'resources/ai.svg' %}" alt="">
+                        <div class="tools__title">
+                            AI Tools
+                        </div>
+                    </div>
+                </div>
                 <div class="actions__container">
                     <a class="actoin__link" href="/strategies/">
                         <div class="action">Strategies</div>

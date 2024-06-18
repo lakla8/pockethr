@@ -7,6 +7,7 @@ My Account
 {% load static %}
     {% block styles %}
     <link rel="stylesheet" href="{% static 'css/my_account.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/tools.css' %}" />
 {% endblock %}
 
 {% block content %}
@@ -94,6 +95,14 @@ My Account
         <div class=""></div>
     </div>
     <main>
+        <div class="tools">
+            <div class="tools__container">
+                <img src="{% static 'resources/ai.svg' %}" alt="">
+                <div class="tools__title">
+                    AI Tools
+                </div>
+            </div>
+        </div>
         <img src="{% static 'image/bg-preview.png' %}" alt="" />
     </main>
 </div>
